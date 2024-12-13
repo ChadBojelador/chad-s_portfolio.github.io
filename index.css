@@ -1,0 +1,728 @@
+@font-face {
+    font-family: 'CanopeeRegular'; 
+    src: url('assets/CanopeeRegular.otf') format('opentype'); 
+}
+@font-face {
+    font-family: 'Ultralight';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Ultralight-BF644b21500d0c0.otf') format('opentype');
+}
+@font-face {
+    font-family: 'EditorialItalic';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Italic-BF644b214fb0c0a.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NewRegular';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+}
+@font-face {
+    font-family: 'DomaineBold';
+    src: url('assets/domaine-font-family-1733770100-0/TestDomaineText-Bold-BF66174a1f96af5.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Destine';
+    src: url('assets/DestineRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Destine';
+    src: url('assets/DestineRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Eroded';
+    src: url('assets/ERODED.ttf') format('truetype');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1d1b;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+    
+
+}
+
+#image-3{
+    width: 33em;
+    height: 23em;
+
+}
+#image-4{
+    width: 30em;
+    height: 23em;
+}
+
+#page1 {
+    transform-origin: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #C4BCB3;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+}
+
+nav {
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3em 2em;
+    position: sticky;
+    top: 0; /* Add this */
+    z-index: 100; /* Optional: To keep it above other elements */
+}
+
+#headText {
+    width: 8em;
+    margin-left: 39%;
+}
+
+#section-1 {
+
+    display: flex;
+    justify-content: space-between;
+    height: 40vh;
+   
+}
+
+#secondClmn {
+    border-left: 2px solid #a1988f;
+    border-right: 2px solid #a1988f;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+}
+
+#featured {
+    color: #1c1b16;
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    text-align: center;
+}
+
+.info {
+    font-family: 'Ultralight';
+    font-size: 2.5em;
+}
+#smart {
+    font-family: 'CanopeeRegular', serif;
+    font-size: 2em;
+}
+#lastname {
+    color: #C4BCB3;
+    background-color: #1c1d1b;
+    display: inline-block;
+    width: 100%;
+    font-family: 'CanopeeRegular', serif;
+    text-align: center;
+    font-size: 18em; 
+}
+#description{
+    color: #1c1d1b;
+    border-right: 2px solid #a1988f;
+    display: flex;
+
+}
+#size-1{
+    color: #1c1b16;
+    font-size: 5em;
+    font-family: 'DomaineBold', serif;
+    text-decoration: line-through #1c1d1b 2px;
+}
+
+#size-2{
+    color: #1c1b16;
+    font-family: 'DomaineBold', serif;
+    font-size: 4em;
+  
+}
+.sdg {
+    height: 27em;
+    width: 100%;
+    padding: 1em;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border:  solid #1c1d1b;
+}
+
+
+.sdg:before {
+    content: '';
+    position: absolute;
+    top: -4px; /* Adjust based on border size */
+    left: -4px; /* Adjust based on border size */
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Define border style */
+    pointer-events: none; /* Ensures the pseudo-element doesn't interfere with hover events */
+    border-radius: 8px; /* Optional: Match or customize the border radius */
+}
+
+#scale:hover .sdg {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow on hover */
+    transform: scale(1.05); /* Slightly scales the container */
+}
+
+#section-3{
+    display: flex;
+    
+}
+#aside-1{
+    border-right: 2px solid #908980;
+    flex-direction: column;
+    padding-right: 2em;
+    margin-bottom: 4em;
+}
+
+
+#section-4{
+    color: #C4BCB3;
+    background-color: #1c1d1b;
+    display: inline-block;
+    width: 75%;
+    font-family: 'CanopeeRegular', serif;
+    text-align: center;
+    font-size: 1em; 
+    padding-left: 5em;
+    padding-right: 5em;
+    
+    
+}
+
+#bio-container {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    align-items: center;
+    gap: 2em; /* Space between image and text */
+    justify-content: center;
+    align-items: center;
+}
+
+#profilepic {
+    width: 25em;
+    height: 32em;
+    border: 3px solid #1c1d1b;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    justify-content: center;
+    align-items: center;
+    margin-left: 15em;
+}
+.page{
+    display: block;
+}
+.bio {
+    color: #1c1b16;
+    font-size: 1.8em;
+    font-family: 'NewRegular', serif;
+    line-height: 1.5; /* Improve readability */
+    margin-left: 10em;
+    width: 15em;
+    text-decoration: line-through #908980 1px;
+}
+#landscape{
+ 
+    height: 50%;
+    width: 100%;
+    padding-left: 2em;
+}
+#info-2{
+    color: #1c1b16;
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    text-align: center;
+    text-decoration: line-through #1c1b16 2px;
+}
+
+#info-3{
+    font-family: 'Ultralight';
+    font-size: 3em;
+    margin-left: 2em;
+}
+
+#page5 {
+    padding: 25px 0;
+    width: 100%;
+    background-color: #C4BCB3;
+    border-top: 1px solid #2f2f2f;
+    border-bottom: 1px solid #2f2f2f;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#page5::-webkit-scrollbar {
+    display: none;
+}
+
+#page5 h1 {
+    font-size: 100px;
+    font-family: domain;
+    font-weight: 100;
+    display: inline-block;
+    /* background-color: red; */
+    animation-timing-function: linear;
+    margin-right: 30px;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#contacts{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+       text-decoration: none;
+}
+.Socmed{
+    color: #1c1b16;
+    font-family: 'Ultralight', serif;
+    font-size: 2em;
+
+
+}
+#contacts a {
+    text-decoration: none;
+}
+#page5 h1 span {
+    font-family: canopee;
+    background-color: #1b1b1b;
+    color: #C4BCB3;
+    padding: 0 12px;
+
+
+}
+
+section-5{
+    height: 100vh;
+    width: 100vh;
+}
+#page-4{
+    height: 100vh;
+}
+#page-5{
+ 
+    height: 100vh;
+}
+
+#section-8{
+    height: 50vh;
+    margin-top: 30em;
+display: block;}
+#text{
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    text-decoration: line-through#C4BCB3 1px;
+    color: #C4BCB3;
+
+}
+#text-container{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 20vh;
+    border-top: solid 2px #1c1d1b;
+    border-bottom: solid 2px #1c1d1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1d1b;
+}
+#text-container2{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 20vh;
+    width: 60%;
+    padding-left: 10em;
+    padding-right: 10em;
+    border-top: solid 2px #1c1d1b;
+    border-bottom: solid 2px #1c1d1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1d1b;
+}
+#text-2{
+    font-family: 'Destine',serif;
+    color: #C4BCB3;
+    font-size: 5em;
+}
+#image-container{
+    display: flex;
+}
+#container-1{
+    display: flex;
+ 
+}
+#image-2{
+    height: 30em;
+    width: 30em;
+}
+#view{
+    height: 200vh;
+    width: auto;
+}
+#par-1{
+    color: #1c1b16;
+    font-family: 'Ultralight', serif;
+    font-size: 2em;
+
+}
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: #908980 2px solid;
+}
+#s-2{
+    display: flex;
+    height: 100vh;
+    padding-top: 1em;
+}
+
+#s-2 h1{
+    color: #1c1b16;
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    padding-right: 1em;
+}
+#s-3{
+    display:flex
+}
+#s-4{
+    display: flex;
+}
+#s-4 h1{
+    color: #1c1b16;
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    padding-right: 1em;
+    margin-top: -5em;
+}
+#s-4 h2{
+    font-family: 'Ultralight';
+    font-size: 2.5em;
+    margin-top: -10em;
+    
+}
+#s-2 h2{
+    font-family: 'Ultralight';
+    font-size: 2.5em;
+    padding-bottom: 1em;
+}
+#par{
+    font-size: 3em;
+    color: #1c1b16;
+    font-family: 'Ultralight', serif;
+   
+}
+#section-6{
+    height: 50vh;
+    width: 100vh;
+    padding-top: 2em;
+}
+.pics{
+    height: 150%;
+    width: 200%;
+
+}
+.page-2{
+    border-top: 2px solid  #C4BCB3;;
+    height: 100vh;
+    
+}
+#border{
+    border-top: #908980 2px solid;
+    border-bottom: #908980 2px solid;
+}
+.page-2 p{
+    color: #810c23;
+    font-family: 'Eroded', serif;
+    font-size: 10em;
+    text-align: center;
+    text-decoration: line-through 2px #810c23 ;
+}
+.page-2 img{
+    height: 30em;
+    width: 20em;
+}
+#foot{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Ultralight', serif;
+    color: #1c1b16;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+  
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 34px));
+    }
+}
+
+#page5:hover h1{
+    animation-play-state: paused;
+}
+
+
+@media (max-width: 768px) {
+   #page1{
+    padding-left: 12px;
+    padding-right: 12px;
+   }
+   .info{
+    font-size: 1em;
+   
+}
+#block{
+    padding-bottom: 0;
+    height: fit-content;
+}
+#s-2{
+    padding-bottom: 0;
+}
+#s-2 h2{
+    padding-bottom: 0;
+}
+#foot{
+    font-size: 1em;
+}
+#page-5{
+    height: auto;
+}
+#featured{
+    font-size: 2em;
+}
+   #secondClmn{
+    height: 20em;
+   }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #headText #address{
+        margin-top: 5px;
+    }
+    #headText {
+        margin-left: 0;
+        width: 70%;
+    }
+    #address{
+        font-size: 8px;
+    }
+    #image-4{
+        width: 100%;
+        height: 8em;
+    }
+    #image-3{
+        width: 100%;
+        height: 8em;
+    }
+    #aside-1{
+        margin-top: -3.5em;
+    }
+    .bio{
+        font-size: 0.8em;
+        margin-left: 7em;
+        margin-top: -2em;
+        list-style-type: none;
+    }
+
+    #size-1{
+        font-size: 2em;
+        margin-left: 1em;
+    }
+    #size-2{
+        font-size: 2em;
+        margin-left: 0.6em;
+    }
+    #section-3{
+        display: block;
+    }
+   #section-4{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+   }
+  .par{
+    font-size: 1em;
+    text-align: center;
+  }
+  #border{
+    font-size: 0.5em;
+  }
+  #aside-1{
+    padding-top: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  #s-2{
+    font-size: 5px;
+  }
+  
+  #s-4{
+    font-size: 5px;
+    margin-top: 2em;
+    display: flex;
+  }
+    #section-2{
+        width: 100%;
+        height: 8em;
+        margin-top: 5.4em;
+    }
+  
+    #section-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+   
+
+    #lastname {
+        font-size: 10em;
+    }
+
+    #profilepic {
+        margin-left: 5em;
+        width: 13em;
+        height: 15em;
+    }
+    #landscape{
+        padding-left: 0;
+        margin-top: -3.9em;
+    }
+    #bio-container {
+        flex-direction: column;
+        margin-left: 0;
+        
+    }
+
+    #container {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+
+    #text-container, #text-container2 {
+        width: 100%;
+        padding: 1em;
+
+    }
+
+    #info-3 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    #contacts {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .Socmed {
+        font-size: 1.5em;
+    }
+  
+
+
+    #lastname {
+        font-size: 8em; /* Reduced from 10em */
+    }
+
+    #info-3 {
+        font-size: 1em; /* Reduced from 1.2em */
+    }
+
+    .Socmed {
+        font-size: 1em; /* Reduced from 1.5em */
+    }
+
+        #sd16,
+        #project {
+            font-size: 1.5em; /* Adjust as needed */
+            margin-left: 0; /* Optional: Adjust margin */
+            margin-top: 1em; /* Optional: Adjust spacing */
+        }
+    
+        #project {
+            font-size: 1.2em; /* Smaller size for #project if needed */
+        }
+    
+        /* Example for additional responsiveness */
+        #sd16 {
+            font-size: 1.2em; /* Smaller size for #sd16 */
+            margin-left: -1em; /* Optional: Adjust positioning */
+        }
+    #s-4 h2 {
+        padding-left: 1em;
+    }
+    .sdg{
+        width: 100%;
+        height: 45%;
+        padding: 0;
+    }
+    #section-5{
+        margin-top: -4em;
+        border-color: #2f2f2f;
+    }
+    #text{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #par-2{
+        font-size: 5px;
+    }
+    #text-container2{
+        font-size: 5px;
+        height: fit-content;
+    }
+    #text-2{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    #par-1{
+        font-size: 15px;
+        text-align: center;
+    }
+    #text-container{
+        font-size: 6px;
+        text-align: center;
+       
+        height: fit-content;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    #featured {
+        font-size: 1.5em; /* Reduced from 2em */
+    }
+
+    .info {
+        font-size: 0.5em; /* Reduced from 1.2em */
+    }
+
+    #lastname {
+        font-size: 4em; /* Reduced from 5em */
+    }
+
+    #info-2 {
+        font-size: 1.5em; /* Reduced from 2em */
+    }
+
+    .page-2 p {
+        font-size: 2em; /* Reduced from 3em */
+    }
+}

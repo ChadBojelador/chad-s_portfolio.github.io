@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'CanopeeRegular'; 
+    src: url('assets/CanopeeRegular.otf') format('opentype'); 
+}
+@font-face {
+    font-family: 'Ultralight';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Ultralight-BF644b21500d0c0.otf') format('opentype');
+}
+@font-face {
+    font-family: 'EditorialItalic';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Italic-BF644b214fb0c0a.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NewRegular';
+    src: url('assets/EditorialNewFontFamily/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+}
+@font-face {
+    font-family: 'DomaineBold';
+    src: url('assets/domaine-font-family-1733770100-0/TestDomaineText-Bold-BF66174a1f96af5.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Destine';
+    src: url('assets/DestineRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Destine';
+    src: url('assets/DestineRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Eroded';
+    src: url('assets/ERODED.ttf') format('truetype');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3em 2em;
+    position: sticky;
+    top: 0; /* Add this */
+    z-index: 100; /* Optional: To keep it above other elements */
+}
+
+#headText {
+    width: 8em;
+    margin-left: 39%;
+}
+
+
+#heading-1{
+    color: #1c1b16;
+    font-family: 'CanopeeRegular', serif;
+    font-size: 5em;
+    text-align: center;
+    text-decoration: line-through#1c1b16 4px;
+}
+
+.section-a {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.title {
+    font-family: 'CanopeeRegular', serif;
+    font-size: 2em;
+    color: #1c1b16;
+    margin-bottom: 1em;
+}
+#tetx0{
+    font-size: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+}
+#project{
+    padding-top: 3em;
+    padding-left: 1em;
+}
+#tetx1{
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+.prototype-image {
+    width: 10em;
+    height: auto;
+    border-radius: 8px; /* Adds slight rounding for a clean look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#tetx{
+    display: block;
+    justify-content: center;
+}
+:root {
+    --pink: #ecb2ba;
+    --pink-dark: #c6939a;
+    --tape-gray: #dbd8be;
+    --tape-edge-gray: #b7b49d;
+    --transparent: rgba(255, 255, 255, 0);
+  }
+  
+  body {
+    background: #ebf4e9;
+    padding-left: 2em;
+    padding-right: 2em;
+
+  }
+
+  .pink {
+    --paper-color: var(--pink);
+    --paper-dark: var(--pink-dark);
+    --shadow-size: 1px;
+    --transparent: rgba(236, 178, 186, 0);
+    
+  }
+  
+  .blue {
+    --paper-color: #d5e0f9;
+    --paper-dark: #c2d0ea;
+    --shadow-size: 3px;
+    --transparent: rgba(213, 224, 249, 0);
+  }
+  
+  .paper {
+    position: relative;
+    background: linear-gradient(
+        to bottom right,
+        var(--paper-dark),
+        20%,
+        var(--transparent)
+      ),
+      var(--paper-color);
+    width: 25em;
+    height: 20em;
+    min-width: 250px;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    font-size: 2rem;
+    box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        var(--transparent),
+        50%,
+        var(--paper-dark),
+        51%,
+        var(--transparent)
+      ),
+      linear-gradient(
+        to right,
+        var(--transparent),
+        50%,
+        var(--paper-dark),
+        51%,
+        var(--transparent)
+      );
+  }
+  
+  .tape-section {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .top-tape {
+    position: absolute;
+    height: 4vmin;
+    top: -5px;
+    width: 110%;
+    background-color: var(--tape-gray);
+    border-right: 1px dotted var(--tape-edge-gray);
+    border-left: 1px dotted var(--tape-edge-gray);
+    opacity: 0.5;
+  }
+  
+  .tape-section:first-of-type {
+    top: 0;
+  }
+  
+  .tape-section:last-of-type {
+    bottom: 0;
+  }
+  
+  .tape-section::before,
+  .tape-section::after {
+    content: "";
+    width: 10vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: var(--tape-gray);
+    opacity: 0.5;
+    border-right: 1px dotted var(--tape-edge-gray);
+    border-left: 1px dotted var(--tape-edge-gray);
+  }
+  
+  .tape-section:last-of-type::after {
+    transform: rotate(-45deg);
+    right: -4vmin;
+    top: -3vmin;
+  }
+  
+  .tape-section:first-of-type::before {
+    transform: rotate(-45deg);
+    left: -4vmin;
+  }
+  
+  .tape-section:first-of-type::after {
+    transform: rotate(45deg);
+    right: -4vmin;
+    top: 0;
+  }
+  
+  .tape-section:last-of-type::before {
+    transform: rotate(45deg);
+    left: -4vmin;
+    bottom: 0;
+  }
+  @media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    #headText {
+        margin-left: 0;
+        margin-bottom: 1em;
+        width: auto;
+    }
+
+    #heading-1 {
+        font-size: 4em;
+    }
+
+    .section-a {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .prototype-image {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #heading-1 {
+        font-size: 3em;
+    }
+
+    #headText {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .section-a {
+        flex-direction: column;
+        margin: 1em 0;
+    }
+
+    #tetx0 {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    .paper {
+        width: 90%;
+        height: auto;
+        min-width: unset;
+        min-height: unset;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5em;
+    }
+
+    #heading-1 {
+        font-size: 2em;
+    }
+
+    .prototype-image {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .paper {
+        font-size: 1rem;
+    }
+}
